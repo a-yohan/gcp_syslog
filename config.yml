@@ -1,0 +1,14 @@
+program_name: gcp_syslog
+protocol: udp
+host: localhost
+port: 514
+resources:
+ - "projects/project_id"
+query: |
+ (
+ log_id("compute.googleapis.com%2Fnat_flows")
+ -jsonPayload.connection.dest_ip="1.1.1.1"
+ -jsonPayload.connection.dest_ip="8.8.8.8"
+ )
+# credential: ./gcp.json
+debug: false
