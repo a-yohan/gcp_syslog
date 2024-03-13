@@ -6,7 +6,7 @@ require (
 	cloud.google.com/go/logging v1.9.0
 	github.com/spf13/viper v1.18.2
 	google.golang.org/api v0.156.0
-	google.golang.org/protobuf v1.32.0
+	google.golang.org/protobuf v1.33.0
 )
 
 require (
